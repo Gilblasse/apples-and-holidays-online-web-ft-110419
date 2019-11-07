@@ -55,8 +55,11 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
-  while row < 
-  puts holiday_hash.find {|hash,value_hash|  value_hash}[0].to_s.capitalize << ":"
+  row = 0
+  while row < 3
+    puts holiday_hash.find {|hash,value_hash|  value_hash}[row].to_s.capitalize << ":"
+  row += 1
+  end
 end
 
 def all_holidays_with_bbq(holiday_hash)
