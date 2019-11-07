@@ -56,7 +56,11 @@ def all_supplies_in_holidays(holiday_hash)
   #   Fourth Of July: Fireworks, BBQ
   # etc.
   row = 0
-  puts holiday_hash.find {|hash,value_hash|  value_hash}[row].to_s.capitalize << ":"
+  puts holiday_hash.find {|hash,value_hash|  value_hash}[0].to_s.capitalize << ":"
+
+  holiday_hash.find {|hash,value_hash|  value_hash}[1].find do |k,v|
+		puts "  #{k}: #{v.join(' ')}"
+	end
 end
 
 def all_holidays_with_bbq(holiday_hash)
