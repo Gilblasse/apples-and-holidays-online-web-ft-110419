@@ -58,15 +58,6 @@ def all_supplies_in_holidays(holiday_hash)
   row = 0
   puts holiday_hash.find {|hash,value_hash|  value_hash}[0].to_s.capitalize << ":"
 
-  holiday_hash.find {|hash,value_hash|  value_hash}[1].find do |k,v|
-  	if k.to_s.split('_')[1].nil?
-  		title = k.to_s.capitalize
-  	else
-  		title = (k.to_s.split('_').map{|w| w.capitalize}).join(' ')
-  	end
-		supplies = v.join(', ')
-		puts "  #{title}: #{supplies}"
-	end
 end
 
 def all_holidays_with_bbq(holiday_hash)
