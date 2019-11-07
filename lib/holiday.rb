@@ -59,7 +59,7 @@ def all_supplies_in_holidays(holiday_hash)
   puts holiday_hash.find {|hash,value_hash|  value_hash}[0].to_s.capitalize << ":"
 
   holiday_hash.find {|hash,value_hash|  value_hash}[1].find do |k,v|
-		puts "  #{k.capitalize}: #{v.join(' ')}"
+		puts "  #{k.capitalize}: #{v.join(', ')}"
 	end
 end
 
